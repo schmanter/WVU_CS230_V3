@@ -1,0 +1,19 @@
+<div class="container-fluid ps-0">
+    <div class="d-flex flex-row align-items-stretch">
+        <div class="flex-column-1 ps-0">
+            <app-side-nav-bar>Loading side nav bar</app-side-nav-bar>
+        </div>
+        <div class="flex-column">
+            <app-top-nav-bar>Loading top nav bar</app-top-nav-bar>
+            <div class="d-flex flex-row">
+                <div class="flex-column-5 ps-0">
+                    <app-left-spacer>Loading left spacer</app-left-spacer>
+                </div>
+                <div class="flex-column ps-0">
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+            <app-bottom-nav-bar>Loading bottom nav bar</app-bottom-nav-bar>
+        </div>
+    </div>
+</div>

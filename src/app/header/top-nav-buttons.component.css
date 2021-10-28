@@ -1,0 +1,67 @@
+.up-pills{
+    background-color: black;
+    border-radius: 5px;
+    border-width: 2px;
+    border-color: white;
+}
+
+.up-pills:hover{
+    background-color: rgb(56, 56, 56);
+}
+
+.down-pills{
+    background-color:rgb(255, 166, 0);
+    border-radius: 5px;
+}
+
+.down-pills:hover{
+    background-color: gold;
+}
+
+.signup {
+    color: rgb(255, 166, 0);
+}
+
+.login {
+    color: white;
+}
+
+.login:hover {
+    color: rgb(255, 166, 0);
+}
+
+.blog {
+    color: white;
+}
+
+.blog:hover {
+    color: rgb(255, 166, 0);
+}
+
+.careers {
+    color: white;
+}
+
+.careers:hover {
+    color: rgb(255, 166, 0);
+}
+
+.sdk {
+    color: white;
+}
+
+.sdk:hover {
+    color: rgb(255, 166, 0);
+}
+
+.games {
+    color: white;
+}
+
+.games:hover {
+    color: rgb(255, 166, 0);
+}
+
+.nav-divider {
+    color: white;
+}
