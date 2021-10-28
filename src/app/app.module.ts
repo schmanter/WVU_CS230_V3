@@ -21,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http'
 import { UserInfoComponent } from './header/user-info.component';
 import { PostInfoComponent } from './body/home/post-info.component';
 import { EditPostInfoComponent } from './body/home/edit-post-info.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -41,12 +42,12 @@ import { EditPostInfoComponent } from './body/home/edit-post-info.component';
     UserInfoComponent,
     PostInfoComponent,
     EditPostInfoComponent
-
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

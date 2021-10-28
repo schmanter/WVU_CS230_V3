@@ -2,7 +2,7 @@ import { HttpClient } from "@angular/common/http";
 import { Component, Injectable, OnInit } from "@angular/core";
 import { PostInfo } from "./post-info.model";
 
-@Injectable()
+@Injectable({providedIn: 'root'})
 @Component({
     selector: "post-info",
     templateUrl: "post-info.component.html"
@@ -18,9 +18,6 @@ export class PostInfoComponent implements OnInit {
         this.getPostInfo();
         console.log("Registering showPostInfo as a subscriber");
         this.showPostInfo();
-        this.modifyPostInfo().subscribe(data => {
-            console.log(data);
-        })
     }
 
     getPostInfo() {
@@ -34,14 +31,8 @@ export class PostInfoComponent implements OnInit {
         })
     }
 
-    modifyPostInfo() {
-        var temp: PostInfo = {
-            video: "https://www.youtube.com/embed/sN5XetbrzLc",
-            user: "Greg Potts",
-            avatar: "https://cdn2.iconfinder.com/data/icons/business-hr-and-recruitment/100/account_blank_face_dummy_human_mannequin_profile_user_-512.png"
-        }
-       
-        return this.http.put('https://medaltv-app-default-rtdb.firebaseio.com/post-info.json', temp);
+    modifyPostInfo(data:PostInfo) {
+        return this.http.put('https://medaltv-app-default-rtdb.firebaseio.com/post-info.json', data);
     }
 
 }

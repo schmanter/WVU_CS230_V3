@@ -1,19 +1,22 @@
 <div class="container">
     <div class="row">
         <div class="col-8">
-            <form>
+            <form #postForm="ngForm" (ngSubmit)="onUpdatePostInfo(postForm.value)">
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="basic-addon1">@</span>
-                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" ngModel name="user">
                   </div>
                   <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
-                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                    <span class="input-group-text" id="basic-addon3">Avatar link</span>
+                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" ngModel name="avatar">
                   </div>
                   <div class="input-group mb-3">
-                    <span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
-                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                    <span class="input-group-text" id="basic-addon3">Video link</span>
+                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" ngModel name="video">
                   </div>
+                  <button class="dark btn-dark" type="submit">
+                    Post it!
+                  </button>
             </form>
         </div>
     </div>
