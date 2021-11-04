@@ -1,4 +1,5 @@
 import { Component, Injectable } from "@angular/core";
+import { DatabaseService } from "./database.service";
 import { PostInfoComponent } from "./post-info.component";
 import { PostInfo } from "./post-info.model";
 
@@ -8,8 +9,8 @@ import { PostInfo } from "./post-info.model";
 })
 export class EditPostInfoComponent {
     
-    constructor(private postService:PostInfoComponent) {
-
+    constructor(private postService:PostInfoComponent, private dbService:DatabaseService) {
+        dbService.showData();
     }
 
     onUpdatePostInfo(data:PostInfo){
