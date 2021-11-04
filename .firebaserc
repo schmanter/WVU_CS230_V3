@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "medaltv-app": {
+      "hosting": {
+        "medaltv": [
+          "medaltv-app"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "medaltv-app"
+  }
+}
