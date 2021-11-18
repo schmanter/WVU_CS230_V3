@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthComponent } from './auth/auth.component';
 import { DownloadPageComponent } from './body/download/download-page.component';
 import { GamesPageComponent } from './body/games/games-page.component';
 import { DiscoveryPageComponent } from './body/home/discovery.component';
@@ -11,7 +12,8 @@ const routes: Routes = [
   { path: 'discovery', component: DiscoveryPageComponent },
   { path: 'games', component: GamesPageComponent },
   { path: 'download', component: DownloadPageComponent },
-  { path: 'game-one', component: GameOneComponent }
+  { path: 'game-one', component: GameOneComponent },
+  { path: 'auth', component: AuthComponent}
 ];
 
 @NgModule({
